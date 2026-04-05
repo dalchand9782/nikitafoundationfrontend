@@ -1,0 +1,125 @@
+/* Nikita Foundation LMS - Custom Styles */
+
+/* Logo animation */
+.logo-pulse {
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* Stat card gradient overlay */
+.stat-card-overlay {
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+}
+
+/* Table row hover */
+.table-row-hover {
+    transition: background-color 0.15s ease;
+}
+
+.table-row-hover:hover {
+    background-color: rgba(44, 85, 48, 0.04);
+}
+
+/* Input focus ring */
+.input-focus-ring:focus {
+    box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.15);
+}
+
+/* Button press effect */
+.btn-press:active {
+    transform: scale(0.98);
+}
+
+/* Mobile nav item */
+.nav-item-active {
+    background: linear-gradient(to top, rgba(44, 85, 48, 0.1), transparent);
+}
+
+/* Status badges */
+.badge-running {
+    background-color: rgba(54, 123, 72, 0.1);
+    color: #367B48;
+}
+
+.badge-closed {
+    background-color: rgba(87, 100, 89, 0.1);
+    color: #576459;
+}
+
+/* Form section divider */
+.form-divider {
+    position: relative;
+}
+
+.form-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #E4E2DC;
+}
+
+.form-divider span {
+    position: relative;
+    background: white;
+    padding: 0 16px;
+}
+
+/* Signature upload area */
+.signature-upload {
+    border: 2px dashed #E4E2DC;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.signature-upload:hover {
+    border-color: #2C5530;
+    background-color: rgba(44, 85, 48, 0.02);
+}
+
+/* OTP input spacing */
+.otp-input-group input {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+/* Sidebar active link */
+.sidebar-link-active {
+    background: linear-gradient(90deg, rgba(44, 85, 48, 0.1), transparent);
+    border-left: 3px solid #2C5530;
+}
+
+/* Dashboard card icons */
+.dashboard-icon {
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.1), rgba(44, 85, 48, 0.05));
+}
+
+/* Loading skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+}
